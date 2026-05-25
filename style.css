@@ -1,0 +1,498 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #eef1f7 100%);
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+    color: #333;
+}
+
+body::before {
+    content: 'JAY AMBE SOUND';
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    color: rgba(0, 0, 0, 0.12);
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.65);
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 1;
+    mix-blend-mode: multiply;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.55);
+    color: #1a1a1a;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-size: 1.2rem;
+    margin: 0.1rem 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+main {
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.45);
+    margin: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+#player {
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(248, 249, 250, 0.55);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+button {
+    margin-right: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    background: rgba(255, 255, 255, 0.45);
+    height: 35px;
+    margin: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+header nav ul li:hover {
+    background: rgba(255, 255, 255, 0.65);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+header nav ul li a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 2rem;
+    animation: slideIn 0.5s ease-out;
+}
+
+section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    margin-top: 2rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.social li {
+    margin: 0;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.social a .fab {
+    font-size: 20px;
+}
+
+.social a.instagram {
+    background: linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);
+    color: #fff;
+}
+
+.social a.youtube {
+    background: #FF0000;
+    color: #fff;
+}
+
+.social a.whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+.social a:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    opacity: 0.98;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        margin: 0.25rem 0;
+    }
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    #logo {
+        width: 50px;
+    }
+}
+
+.photo-grid,
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.photo-card,
+.video-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.photo-card img,
+.video-card video {
+    width: 100%;
+    display: block;
+}
+
+.photo-card img {
+    height: auto;
+}
+
+.roadshow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.video-card p {
+    margin: 0.75rem 0;
+    text-align: center;
+    color: #555;
+    padding: 0 0.75rem 1rem;
+}
+
+/* equal smaller media cards for Wedding, Barrat, and Road Show */
+.photo-grid,
+.video-grid,
+.roadshow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.photo-card,
+.video-card {
+    width: 100%;
+    max-width: 260px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.photo-card img,
+.video-card video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-card p {
+    margin: 0.75rem 0;
+    text-align: center;
+    color: #555;
+    padding: 0 0.75rem 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+}
+
+/* footer and social links */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer .social li {
+    margin: 0 0.5rem;
+}
+
+footer .social a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}
+
+/* generic button style */
+a.button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 3px;
+}
+a.button:hover {
+    background: #555;
+}
+
+/* Sound image background */
+.sound-image {
+    background-image: url('https://source.unsplash.com/random/800x600/?audio');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 2rem;
+    color: #fff;
+}
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make videos responsive */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gallery styles */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.photo-card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 4 / 3;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    background: #fff;
+}
+
+.photo-card.highlighted {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(231, 76, 60, 0.25);
+}
+
+.photo-card img.highlighted,
+.photo-grid .photo-card.highlighted img {
+    transform: scale(1.03);
+    box-shadow: 0 18px 35px rgba(231, 76, 60, 0.25);
+}
+
+.gallery-note {
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@keyframes glowHighlight {
+    0%, 100% { box-shadow: 0 10px 22px rgba(231, 76, 60, 0.12); }
+    50% { box-shadow: 0 22px 40px rgba(231, 76, 60, 0.28); }
+}
