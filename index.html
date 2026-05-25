@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAY AMBE SOUND PADRA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="assets/sound.jpg2" alt="Site Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="booking.html">Event Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="review.html">Reviews</a></li>
+            </ul>
+        </nav>
+        <h1>JAY AMBE SOUND PADRA</h1>
+    </header>
+    <main>
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div id="photoGrid" class="photo-grid"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        const photoGrid = document.getElementById('photoGrid');
+        const totalPhotos = 33;
+        let loadedCount = 0;
+        let attemptedCount = 0;
+        const sourcePaths = [
+            'assets',
+            '../../../Assets'
+        ];
+
+        function createPhotoCard(index) {
+            const card = document.createElement('div');
+            card.className = 'photo-card';
+            const img = document.createElement('img');
+            img.alt = '';
+            img.loading = 'lazy';
+            img.dataset.index = index;
+            img.dataset.sourceIndex = '0';
+            img.src = `${sourcePaths[0]}/home.ph${index}.jpg`;
+
+            img.onload = () => {
+                loadedCount += 1;
+            };
+
+            img.onerror = () => {
+                const nextSource = Number(img.dataset.sourceIndex) + 1;
+                if (nextSource < sourcePaths.length) {
+                    img.dataset.sourceIndex = String(nextSource);
+                    img.src = `${sourcePaths[nextSource]}/home.ph${index}.jpg.jpeg`;
+                    return;
+                }
+                attemptedCount += 1;
+                card.remove();
+            };
+
+            card.appendChild(img);
+            return card;
+        }
+
+        for (let i = 1; i <= totalPhotos; i++) {
+            const card = createPhotoCard(i);
+            photoGrid.appendChild(card);
+        }
+
+        if (window.startPhotoHighlights) {
+            window.startPhotoHighlights();
+        }
+    </script>
+    <footer>
+        <p>Follow us:</p>
+        <ul class="social">
+            <li><a href="https://instagram.com/jayambe_sound_padra" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@jayambesoundpadra1369" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
