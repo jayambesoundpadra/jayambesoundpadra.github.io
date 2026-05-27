@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="assets/sound.jpg2" alt="Site Logo" id="logo">
+        <img src="assets/sound.jpg" alt="Site Logo" id="logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -31,7 +31,7 @@
     <script src="script.js"></script>
     <script>
         const photoGrid = document.getElementById('photoGrid');
-        const totalPhotos = 33;
+        const totalPhotos = 34;
         let loadedCount = 0;
         let attemptedCount = 0;
         const sourcePaths = [
@@ -47,7 +47,7 @@
             img.loading = 'lazy';
             img.dataset.index = index;
             img.dataset.sourceIndex = '0';
-            img.src = `${sourcePaths[0]}/home.ph${index}.jpg`;
+            img.src = `${sourcePaths[0]}/home${index}.jpg`;
 
             img.onload = () => {
                 loadedCount += 1;
@@ -57,7 +57,7 @@
                 const nextSource = Number(img.dataset.sourceIndex) + 1;
                 if (nextSource < sourcePaths.length) {
                     img.dataset.sourceIndex = String(nextSource);
-                    img.src = `${sourcePaths[nextSource]}/home.ph${index}.jpg.jpeg`;
+                    img.src = `${sourcePaths[nextSource]}/home${index}.jpg`;
                     return;
                 }
                 attemptedCount += 1;
