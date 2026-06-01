@@ -9,7 +9,17 @@
 </head>
 <body>
     <header>
-        <img src="assets/sound.jpg" alt="Site Logo" id="logo">
+        <div class="brand">
+            <div class="logo-wrap">
+                <img src="assets/sound.jpg" alt="Site Logo" id="logo">
+                <div class="logo-text">JAY AMBE SOUND</div>
+            </div>
+            <img src="assets/header image.jpg" alt="Header Image" id="header-image">
+        </div>
+        <div class="header-logos-right">
+            <img src="assets/header image1.jpg" alt="Header Logo 1" class="header-logo-right">
+            <img src="assets/header image2.jpg" alt="Header Logo 2" class="header-logo-right">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -17,7 +27,7 @@
                 <li><a href="products.html">Our Products</a></li>
                 <li><a href="booking.html">Event Booking</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="review.html">Reviews</a></li>
             </ul>
         </nav>
         <h1>JAY AMBE SOUND PADRA</h1>
@@ -37,33 +47,56 @@
                 <li>Baraat Setup</li>
                 <li>JBL Setup</li>
                 <li>RCF Setup</li>
-                <li>Hydra Pluse Setup</li>
+                <li>Hydra Pulse Setup</li>
             </ul>
         </section>
         <section id="barrat-gallery">
-    <h2>Barrat Photo Gallery</h2>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: start;">
-        <img src="barrat1.jpg" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid #ccc; border-radius: 8px;" alt="Barrat photo 1">
-        <img src="barrat2.jpg" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid #ccc; border-radius: 8px;" alt="Barrat photo 2">
-        <img src="barrat3.jpg" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid #ccc; border-radius: 8px;" alt="Barrat photo 3">
-        <img src="barrat4.jpg" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid #ccc; border-radius: 8px;" alt="Barrat photo 4">
-    </div>
-</section>
-       <section id="roadshow-gallery">
-    <h2>Road Show Gallery</h2>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: start;">
-        <img src="roadshow1.jpg" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid #ccc; border-radius: 8px;" alt="Road Show 1">
-        <img src="roadshow2.jpg" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid #ccc; border-radius: 8px;" alt="Road Show 2">
-        <img src="roadshow3.jpg" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid #ccc; border-radius: 8px;" alt="Road Show 3">
-    </div>
-</section>
+            <h2>Barrat Photo Gallery</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="assets2/barrat1.jpg" alt="Barrat photo 1">
+                </div>
+                <div class="photo-card">
+                    <img src="assets2/barrat2.jpg" alt="Barrat photo 2">
+                </div>
+                <div class="photo-card">
+                    <img src="assets2/barrat3.jpg" alt="Barrat photo 3">
+                </div>
+                <div class="photo-card">
+                    <img src="assets2/barrat4.jpg" alt="Barrat photo 4">
+                </div>
+            </div>
+        </section>
+        <section id="roadshow-gallery">
+            <h2>Road Show Gallery</h2>
+            <div class="roadshow-grid">
+                <div class="photo-card">
+                    <img src="assets2/roadshow1.jpg" alt="Road Show photo 1">
+                </div>
+                <div class="photo-card">
+                    <img src="assets2/roadshow2.jpg" alt="Road Show photo 2">
+                </div>
+                <div class="photo-card">
+                    <img src="assets2/roadshow3.jpg" alt="Road Show photo 3">
+                </div>
+                <div class="video-card">
+                    <video controls>
+                        <source src="assets2/roadshow.vid4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Road Show clip</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Follow us:</p>
         <ul class="social">
             <li><a href="https://instagram.com/jayambe_sound_padra" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/share/1GmbckS9Y8/" class="facebook" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://www.youtube.com/@jayambesoundpadra1369" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a></li>
         </ul>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
