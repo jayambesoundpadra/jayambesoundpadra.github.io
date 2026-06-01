@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAY AMBE SOUND PADRA</title> 
-       <meta name="google-site-verification" content="-qJ3xR59zQJDtikPfLHkhsMdt8pCLD4WTqfypnaRe68" />
+    <title>JAY AMBE SOUND PADRA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="assets/sound.jpg" alt="Site Logo" id="logo">
+        <div class="brand">
+            <div class="logo-wrap">
+                <img src="assets/sound.jpg" alt="Site Logo" id="logo">
+                <div class="logo-text">JAY AMBE SOUND</div>
+            </div>
+            <img src="assets/header image.jpg" alt="Header Image" id="header-image">
+        </div>
+        <div class="header-logos-right">
+            <img src="assets/header image1.jpg" alt="Header Logo 1" class="header-logo-right">
+            <img src="assets/header image2.jpg" alt="Header Logo 2" class="header-logo-right">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,7 +27,7 @@
                 <li><a href="products.html">Our Products</a></li>
                 <li><a href="booking.html">Event Booking</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="review.html">Reviews</a></li>
             </ul>
         </nav>
         <h1>JAY AMBE SOUND PADRA</h1>
@@ -32,36 +41,46 @@
     <script src="script.js"></script>
     <script>
         const photoGrid = document.getElementById('photoGrid');
-        const totalPhotos = 34;
-        let loadedCount = 0;
-        let attemptedCount = 0;
-        const sourcePaths = [
-            'assets',
-            '../../../Assets'
-        ];
+        const totalPhotos = 33;
+        const extensions = ['.jpg'];
+        const sourcePaths = ['assets'];
 
         function createPhotoCard(index) {
             const card = document.createElement('div');
             card.className = 'photo-card';
+
             const img = document.createElement('img');
-            img.alt = '';
+            img.alt = `home${index}.jpg`;
             img.loading = 'lazy';
             img.dataset.index = index;
             img.dataset.sourceIndex = '0';
-            img.src = `${sourcePaths[0]}/home${index}.jpg`;
+            img.dataset.extIndex = '0';
+            img.src = `${sourcePaths[0]}/home${index}${extensions[0]}`;
+
+            const caption = document.createElement('p');
+            caption.className = 'photo-caption';
+            caption.textContent = `home${index}.jpg`;
 
             img.onload = () => {
-                loadedCount += 1;
+                card.appendChild(caption);
             };
 
             img.onerror = () => {
+                const nextExt = Number(img.dataset.extIndex) + 1;
+                if (nextExt < extensions.length) {
+                    img.dataset.extIndex = String(nextExt);
+                    img.src = `${sourcePaths[Number(img.dataset.sourceIndex)]}/home${index}${extensions[nextExt]}`;
+                    return;
+                }
+
                 const nextSource = Number(img.dataset.sourceIndex) + 1;
                 if (nextSource < sourcePaths.length) {
                     img.dataset.sourceIndex = String(nextSource);
-                    img.src = `${sourcePaths[nextSource]}/home${index}.jpg`;
+                    img.dataset.extIndex = '0';
+                    img.src = `${sourcePaths[nextSource]}/home${index}${extensions[0]}`;
                     return;
                 }
-                attemptedCount += 1;
+
                 card.remove();
             };
 
@@ -82,6 +101,7 @@
         <p>Follow us:</p>
         <ul class="social">
             <li><a href="https://instagram.com/jayambe_sound_padra" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/share/1GmbckS9Y8/" class="facebook" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://www.youtube.com/@jayambesoundpadra1369" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a></li>
         </ul>
     </footer>
