@@ -27,7 +27,8 @@ function startBackgroundSlideshow() {
 
     let currentIndex = 0;
     const updateBackground = () => {
-        document.body.style.backgroundImage = `linear-gradient(135deg, rgba(245,245,245,0.72) 0%, rgba(255,255,255,0.72) 50%, rgba(238,241,247,0.72) 100%), url('${backgrounds[currentIndex]}')`;
+        // darker overlay for better contrast
+        document.body.style.backgroundImage = `linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.45) 100%), url('${backgrounds[currentIndex]}')`;
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundPosition = 'center';
         document.body.style.backgroundRepeat = 'no-repeat';
@@ -51,3 +52,4 @@ if (document.readyState === 'loading') {
 
 window.startPhotoHighlights = startPhotoHighlights;
 window.startBackgroundSlideshow = startBackgroundSlideshow;
+
