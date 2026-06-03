@@ -7,11 +7,11 @@
             <img src="assets/sound.jpg" alt="Site Logo" id="logo">
             <div class="logo-text">JAY AMBE SOUND</div>
         </div>
-        <img src="assets/header image.jpg" alt="Header Image" id="header-image">
+        <img src="header image.jpg" alt="Header Image" id="header-image">
     </div>
     <div class="header-logos-right">
-        <img src="assets/header image1.jpg" alt="Header Logo 1" class="header-logo-right">
-        <img src="assets/header image2.jpg" alt="Header Logo 2" class="header-logo-right">
+        <img src="header image1.jpg" alt="Header Logo 1" class="header-logo-right">
+        <img src="header image2.jpg" alt="Header Logo 2" class="header-logo-right">
     </div>
     <h1>JAY AMBE SOUND PADRA</h1>
     <nav>
