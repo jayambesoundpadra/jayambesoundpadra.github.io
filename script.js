@@ -1,5 +1,5 @@
 function startPhotoHighlights() {
-    const photoCards = document.querySelectorAll('#photoGrid .photo-card');
+    const photoCards = document.querySelectorAll('.photo-grid .photo-card');
     let currentPhotoIndex = 0;
 
     if (photoCards.length === 0) {
@@ -122,10 +122,13 @@ function isAutoPageSlideshowEnabled() {
 
 function attachNavClickHandlers() {
     const navLinks = document.querySelectorAll('header nav a');
+    const disableNavSlideshow = () => {
+        disableAutoPageSlideshow();
+    };
+
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            disableAutoPageSlideshow();
-        });
+        link.addEventListener('click', disableNavSlideshow);
+        link.addEventListener('touchstart', disableNavSlideshow, { passive: true });
     });
 }
 
@@ -152,7 +155,7 @@ function startAutoPageSlideshow() {
     const nextPage = pageSequence[(currentIndex + 1) % pageSequence.length];
     setTimeout(() => {
         window.location.href = nextPage;
-    }, 4000);
+    }, 2000);
 }
 
 function initSlideshow() {
@@ -172,4 +175,5 @@ if (document.readyState === 'loading') {
 
 window.startPhotoHighlights = startPhotoHighlights;
 window.startBackgroundSlideshow = startBackgroundSlideshow;
+
 
