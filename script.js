@@ -133,29 +133,8 @@ function attachNavClickHandlers() {
 }
 
 function startAutoPageSlideshow() {
-    if (!isAutoPageSlideshowEnabled()) {
-        return;
-    }
-
-    const pageSequence = [
-        'home.html',
-        'services.html',
-        'products.html',
-        'booking.html',
-        'contact.html',
-        'review.html'
-    ];
-
-    const currentPage = window.location.pathname.split('/').pop();
-    const currentIndex = pageSequence.indexOf(currentPage);
-    if (currentIndex === -1) {
-        return;
-    }
-
-    const nextPage = pageSequence[(currentIndex + 1) % pageSequence.length];
-    setTimeout(() => {
-        window.location.href = nextPage;
-    }, 2000);
+    // Automatic page slideshow disabled by default.
+    return;
 }
 
 function initSlideshow() {
@@ -175,5 +154,4 @@ if (document.readyState === 'loading') {
 
 window.startPhotoHighlights = startPhotoHighlights;
 window.startBackgroundSlideshow = startBackgroundSlideshow;
-
 
