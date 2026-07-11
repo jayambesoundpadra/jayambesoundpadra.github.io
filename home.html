@@ -1,63 +1,236 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAY AMBE SOUND PADRA - Gallery</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-<meta property="og:image" content="https://jayambesoundpadra.github.io/assets/logo.png">
+    <title>JAY AMBE SOUND PADRA — Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero { padding:60px 20px; text-align:center; background:#f7f8fb; }
+        .hero h1 { font-size:2rem; margin:0 0 .5rem; }
+        .hero p { color:#555; margin:0 0 1rem; }
+        .btn-primary { display:inline-block; padding:12px 22px; background:#0078d4; color:#fff; border-radius:6px; text-decoration:none; }
+        .video-showcase { padding:60px 20px; }
+        .video-showcase h2 { margin-bottom:1.25rem; }
+        .video-showcase h3 { margin-bottom:1.5rem; }
+        .services { padding:60px 20px; }
+        .services .grid { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+        .service-card { flex:1 1 260px; background:#fff; padding:20px; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.06); text-align:left; }
+        .service-card h3 { margin-top:12px; margin-bottom:8px; }
+        .about { padding:50px 20px; background:#f4f6f8; text-align:center; }
+        .gallery-section { padding:60px 20px; background:#f8f9fb; }
+        #gallery h2 { text-align:center; margin-bottom:1rem; font-size:1.8rem; color:#1d3557; }
+        .gallery-note { text-align:center; color:#555; margin-top:1.5rem; }
+        .video-showcase .video-card { width:100%; max-width:100%; border-radius:14px; overflow:hidden; box-shadow:0 10px 22px rgba(0,0,0,0.10); background:#111; transition:transform .2s ease, box-shadow .2s ease; }
+        .video-showcase .video-card img { width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:1/1; }
+        .video-showcase .video-card .video-meta { padding:16px 16px 18px; background:#fff; text-align:left; }
+        .video-showcase .video-card .video-meta h3 { margin:0 0 8px; font-size:1rem; color:#1d3557; }
+        .video-showcase .video-card .video-meta p { margin:0; color:#555; font-size:.95rem; line-height:1.5; }
+    </style>
 </head>
 <body>
     <div id="site-header"></div>
     <main>
-        <section id="gallery">
-            <div id="photoGrid" class="photo-grid"></div>
+        <section class="hero">
+            <div class="container" style="max-width:1000px;margin:0 auto;">
+                <h1>Professional Sound & Event Services</h1>
+                <p style="margin:.25rem 0 .75rem;">Reliable audio systems, experienced technicians, and smooth execution for weddings, corporate events, and public gatherings.</p>
+                <div style="display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:1rem;flex-wrap:wrap;">
+                    <a class="btn-primary" href="contact.html">Request a Quote</a>
+                    <span style="background:#222;color:#fff;padding:8px 12px;border-radius:20px;font-weight:600;">Serving since 2013</span>
+                </div>
+                <p style="color:#666;max-width:760px;margin:0 auto;">Over two decades of live sound experience — trusted by local organizers, weddings, schools, and corporate clients. We bring professional gear, punctual teams, and clean, powerful audio to every event.</p>
+            </div>
+        </section>
+
+        <section class="video-showcase" style="padding:40px 20px; background:#fff;">
+            <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
+                <h2 style="margin-bottom:1.25rem;font-size:1.8rem;color:#1d3557;">Watch Our Event Highlights</h2>
+                <h3 style="margin:0 0 1.2rem;font-size:2rem;color:#333;font-weight:700;">We are glad to work with 200+ national and international artists and work with Sunburn events for sound &amp; lights.</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;justify-items:center;align-items:start;">
+                    <div class="video-card">
+                        <img src="assets/home1.jpg" alt="Event Highlight 1" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 1</h3>
+                            <p>Short preview of our sound setup and live event coverage.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home2.jpg" alt="Event Highlight 2" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 2</h3>
+                            <p>Another event clip demonstrating our audio setup.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home3.jpg" alt="Event Highlight 3" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 3</h3>
+                            <p>A third clip showing live audio and event coordination.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home4.jpg" alt="Event Highlight 4" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 4</h3>
+                            <p>More highlights from our event sound services.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home5.jpg" alt="Event Highlight 5" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 5</h3>
+                            <p>Another highlight from our live sound services.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home6.jpg" alt="Event Highlight 6" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 6</h3>
+                            <p>Video of our event audio setup in action.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home7.jpg" alt="Event Highlight 7" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 7</h3>
+                            <p>Showcasing our stage audio and crew coordination.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home8.jpg" alt="Event Highlight 8" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 8</h3>
+                            <p>Clear sound coverage from a live event setup.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home9.jpg" alt="Event Highlight 9" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 9</h3>
+                            <p>A strong demo of our sound staging and lighting coordination.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home10.jpg" alt="Event Highlight 10" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 10</h3>
+                            <p>Another view of our live event sound and stage setup.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home11.jpg" alt="Event Highlight 11" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 11</h3>
+                            <p>Live audio capture from one of our recent events.</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <img src="assets/home12.jpg" alt="Event Highlight 12" loading="lazy">
+                        <div class="video-meta">
+                            <h3>Event Highlight 12</h3>
+                            <p>Final highlight featuring our sound and stage production.</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="color:#555;margin-top:1.2rem;font-size:1rem;">The homepage showcase now uses JPG photos for a cleaner, consistent look.</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
+                <h2>Photo Gallery</h2>
+                <div id="photoGrid" class="photo-grid"></div>
+                <p class="gallery-note">Click any photo to enlarge it.</p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container" style="max-width:1000px;margin:0 auto;">
+                <h2 style="text-align:center;margin-bottom:1rem;">Our Services</h2>
+                <div class="grid">
+                    <div class="service-card">
+                        <i class="fas fa-microphone" style="font-size:24px;color:#0078d4;"></i>
+                        <h3>PA & Live Sound</h3>
+                        <p>Full-scale PA systems with professional mixing for events of any size.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-compact-disc" style="font-size:24px;color:#0078d4;"></i>
+                        <h3>DJ & Music Playback</h3>
+                        <p>Curated playlists, DJ setups, and on-demand music services to match the mood.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-tools" style="font-size:24px;color:#0078d4;"></i>
+                        <h3>Installation & Support</h3>
+                        <p>On-site setup, monitoring, and technical support to ensure a disruption-free event.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container" style="max-width:800px;margin:0 auto;">
+                <p>We combine dependable equipment with experienced staff to deliver events that sound great and run on time.</p>
+                <p style="margin-top:10px;">Get in touch: <a href="contact.html">Contact Form</a> • WhatsApp: <a href="https://wa.me/917600084821">+91 76000 84821</a></p>
+            </div>
+        </section>
+        
+        <section style="padding:30px 20px;">
+            <div class="container" style="max-width:1000px;margin:0 auto;">
+                <h2 style="text-align:center;margin-bottom:1rem;">Why Choose Us</h2>
+                <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+                    <div style="flex:1 1 280px;">
+                        <h3 style="margin-bottom:6px;">Experienced Team</h3>
+                        <p style="margin-top:0;color:#555;">Technicians with 20+ years of live event experience, handling soundcheck, mixing, and onsite troubleshooting.</p>
+                    </div>
+                    <div style="flex:1 1 280px;">
+                        <h3 style="margin-bottom:6px;">Pro Equipment</h3>
+                        <p style="margin-top:0;color:#555;">High-quality PA systems, wireless mics, mixers, and monitoring to suit small gatherings to large outdoor stages.</p>
+                    </div>
+                    <div style="flex:1 1 280px;">
+                        <h3 style="margin-bottom:6px;">Flexible Packages</h3>
+                        <p style="margin-top:0;color:#555;">Customizable packages and transparent pricing — we work within your budget without compromising quality.</p>
+                    </div>
+                </div>
+
+                <h3 style="text-align:center;margin:28px 0 12px;">Selected Equipment</h3>
+                <ul style="max-width:700px;margin:0 auto 16px;color:#444;">
+                    <li>Professional PA speakers (active/passive)</li>
+                    <li>Digital mixing consoles (32/16 channels)</li>
+                    <li>Wireless and wired microphone setups</li>
+                    <li>Stage monitors and subwoofers</li>
+                </ul>
+
+                <h3 style="text-align:center;margin:18px 0 10px;">What Clients Say</h3>
+                <div style="max-width:800px;margin:0 auto;display:grid;gap:12px;">
+                    <blockquote style="background:#fff;padding:14px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.04);">“Excellent sound and punctual team — made our wedding reception perfect.” — Priya K.</blockquote>
+                    <blockquote style="background:#fff;padding:14px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.04);">“Professionals who know their equipment and deliver clear audio every time.” — Rajesh M.</blockquote>
+                </div>
+            </div>
         </section>
     </main>
-    <div id="homeLightbox" class="image-modal" aria-hidden="true">
-        <span class="image-modal-close" role="button" aria-label="Close full photo">×</span>
-        <img class="image-modal-content" id="homeLightboxImg" src="" alt="">
-    </div>
+
     <script src="load-header.js"></script>
     <script src="script.js"></script>
     <script>
         const photoGrid = document.getElementById('photoGrid');
-        const totalPhotos = 33;
-        const extensions = ['.jpg'];
-        const sourcePaths = ['assets'];
+        const photoFiles = [
+            'home1.jpg', 'home4.jpg', 'home5.jpg', 'home13.jpg', 'home16.jpg', 'home17.jpg', 'home18.jpg', 'home19.jpg',
+            'home20.jpg', 'home28.jpg', 'home29.jpg', 'home30.jpg'
+        ];
+        const sourcePath = 'assets';
 
-        function createPhotoCard(index) {
+        function createPhotoCard(filename) {
             const card = document.createElement('div');
             card.className = 'photo-card';
 
             const img = document.createElement('img');
-            img.alt = `home${index}.jpg`;
+            img.alt = filename;
             img.loading = 'lazy';
-            img.dataset.index = index;
-            img.dataset.sourceIndex = '0';
-            img.dataset.extIndex = '0';
-            img.src = `${sourcePaths[0]}/home${index}${extensions[0]}`;
+            img.src = `${sourcePath}/${filename}`;
 
             img.onerror = () => {
-                const nextExt = Number(img.dataset.extIndex) + 1;
-                if (nextExt < extensions.length) {
-                    img.dataset.extIndex = String(nextExt);
-                    img.src = `${sourcePaths[Number(img.dataset.sourceIndex)]}/home${index}${extensions[nextExt]}`;
-                    return;
-                }
-
-                const nextSource = Number(img.dataset.sourceIndex) + 1;
-                if (nextSource < sourcePaths.length) {
-                    img.dataset.sourceIndex = String(nextSource);
-                    img.dataset.extIndex = '0';
-                    img.src = `${sourcePaths[nextSource]}/home${index}${extensions[0]}`;
-                    return;
-                }
-
                 card.remove();
             };
 
@@ -65,10 +238,10 @@
             return card;
         }
 
-        for (let i = 1; i <= totalPhotos; i++) {
-            const card = createPhotoCard(i);
+        photoFiles.forEach(filename => {
+            const card = createPhotoCard(filename);
             photoGrid.appendChild(card);
-        }
+        });
 
         if (window.startPhotoHighlights) {
             window.startPhotoHighlights();
