@@ -251,35 +251,47 @@
     <script src="load-header.js"></script>
     <script src="script.js"></script>
     <script>
-        const photoGrid = document.getElementById('photoGrid');
-        const photoFiles = [
-            'home1.jpg', 'home4.jpg', 'home5.jpg', 'home13.jpg', 'home16.jpg', 'home17.jpg', 'home18.jpg', 'home19.jpg',
-            'home20.jpg', 'home28.jpg', 'home29.jpg', 'home30.jpg'
-        ];
-        const sourcePath = 'assets';
+  const photoGrid = document.getElementById('photoGrid');
+  const photoFiles = [
+    'homevideo.1.mp4', 'homevideo.2.mp4', 'homevideo.3.mp4', 'homevideo.4.mp4',
+    'homevideo.5.mp4', 'homevideo.6.mp4', 'homevideo.7.mp4', 'homevideo.8.mp4',
+    'homevideo.9.mp4', 'homevideo.10.mp4', 'homevideo.11.mp4', 'homevideo.12.mp4'
+  ];
+  const sourcePath = 'assets';
 
-        function createPhotoCard(filename) {
-            const card = document.createElement('div');
-            card.className = 'photo-card';
+  function createVideoCard(filename, index) {
+    const card = document.createElement('div');
+    card.className = 'photo-card';
 
-            const img = document.createElement('img');
-            img.alt = filename;
-            img.loading = 'lazy';
-            img.src = `${sourcePath}/${filename}`;
+    const video = document.createElement('video');
+    video.width = "100%";
+    video.height = "200";
+    video.controls = true;
+    video.preload = "metadata";
+    video.poster = "assets/home" + (index + 1) + ".jpg"; // thumbnail ke liye
+    video.src = `${sourcePath}/${filename}`;
 
-            img.onerror = () => {
-                card.remove();
-            };
+    const meta = document.createElement('div');
+    meta.className = 'video-meta';
+    meta.innerHTML = `
+      <h3>Event Highlight ${index + 1}</h3>
+      <p>Live sound and stage setup from our recent event.</p>
+    `;
 
-            card.appendChild(img);
-            return card;
-        }
+    video.onerror = () => {
+      card.remove();
+    };
 
-        photoFiles.forEach(filename => {
-            const card = createPhotoCard(filename);
-            photoGrid.appendChild(card);
-        });
+    card.appendChild(video);
+    card.appendChild(meta);
+    return card;
+  }
 
+  photoFiles.forEach((filename, index) => {
+    const card = createVideoCard(filename, index);
+    photoGrid.appendChild(card);
+  });
+</script>
         if (window.startPhotoHighlights) {
             window.startPhotoHighlights();
         }
